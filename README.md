@@ -2,14 +2,21 @@
 
 This repository contains the code for the shared task on homophobia/transphobia detection at the second LT-EDI Workshop @ACL 2022. The paper can be accessed here: [bitsa_nlp@LT-EDI-ACL2022: Leveraging Pretrained Language Models for Detecting Homophobia and Transphobia in Social Media Comments](https://arxiv.org/abs/2203.14267)
 
+## How to cite us?
 If you use this code or the fine-tuned models, please cite the following paper:
 
 ```
-@article{bhandari2022bitsa_nlp,
-  title={bitsa\_nlp@ LT-EDI-ACL2022: Leveraging Pretrained Language Models for Detecting Homophobia and Transphobia in Social Media Comments},
-  author={Bhandari, Vitthal and Goyal, Poonam},
-  journal={arXiv preprint arXiv:2203.14267},
-  year={2022}
+@inproceedings{bhandari-goyal-2022-bitsa,
+    title = "bitsa{\_}nlp@{LT}-{EDI}-{ACL}2022: Leveraging Pretrained Language Models for Detecting Homophobia and Transphobia in Social Media Comments",
+    author = "Bhandari, Vitthal  and Goyal, Poonam",
+    booktitle = "Proceedings of the Second Workshop on Language Technology for Equality, Diversity and Inclusion",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.ltedi-1.18",
+    pages = "149--154",
+    abstract = "Online social networks are ubiquitous and user-friendly. Nevertheless, it is vital to detect and moderate offensive content to maintain decency and empathy. However, mining social media texts is a complex task since users don{'}t adhere to any fixed patterns. Comments can be written in any combination of languages and many of them may be low-resource.In this paper, we present our system for the LT-EDI shared task on detecting homophobia and transphobia in social media comments. We experiment with a number of monolingual and multilingual transformer based models such as mBERT along with a data augmentation technique for tackling class imbalance. Such pretrained large models have recently shown tremendous success on a variety of benchmark tasks in natural language processing. We observe their performance on a carefully annotated, real life dataset of YouTube comments in English as well as Tamil.Our submission achieved ranks 9, 6 and 3 with a macro-averaged F1-score of 0.42, 0.64 and 0.58 in the English, Tamil and Tamil-English subtasks respectively. The code for the system has been open sourced.",
 }
 ```
 
@@ -78,6 +85,7 @@ We also conduct an extensive ablation study and present the results in Table 12.
 We observed that the effect of preprocessing was largely dependent on the **choice of language setting**. This makes sense considering the difference in underlying language constructs. Tamil, for instance, does not make use of standard English-based punctuation marks. On the other hand, we conclude that the choice of an effective DA techniqe depends on the **underlying task and the data source**. Social media data often lacks linguistic purism and hence, token perturbations such as those introduced by EDA did not help.
 
 The [Ablations](https://github.com/vitthal-bhandari/Homophobia-Transphobia-Detection/tree/master/Ablations) directory is self contained in that the input files needed to run [Ablation_studies.ipynb](https://github.com/vitthal-bhandari/Homophobia-Transphobia-Detection/blob/master/Ablations/Ablation_studies.ipynb) can be obtained by executing the [Data_Ingestion.ipynb](https://github.com/vitthal-bhandari/Homophobia-Transphobia-Detection/blob/master/Ablations/Data_Ingestion.ipynb) script in the same directory. Remember to run the ingestion script in the same folder as the original dataset.
+
 
 Please cite the following paper when using the dataset:
 
